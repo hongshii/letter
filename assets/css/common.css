@@ -103,28 +103,25 @@ pre{ white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wra
     min-height: 100vh;
     background: #000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    gap: 2rem;
 }
 .main .text {
     color: #fff;
-    position: absolute;
     font-size: 3rem;
-    top: 20rem;
-}
-.main .img {
-    margin-top: -10rem;
 }
 .main .img img {
     width: 100%;
 }
 .main .invite_btn {
-    position: absolute;
-    bottom: 20rem;
     width: 14rem;
     height: 14rem;
     color: #fff;
+    position: relative;
+    margin-top: -1rem;
 }
 .invite_btn p {
     position: absolute;
@@ -155,8 +152,12 @@ img {
     background: url(../imgae/letter.jpg)no-repeat center;
     background-size: cover;
     color: #532020;
-    text-align: center;
     align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 p.typing_txt{
     position:relative;
