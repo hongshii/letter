@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>초대합니다.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+    <div class="main">
+        <h2 class="text">초대합니다.</h2>
+        <div class="img">
+            <img src="../assets/imgae/rrrrr.png" alt="image">
+        </div>
+        <button class="invite_btn">
+            <p>눌러</p>
+            <img src="../assets/imgae/wax.png" alt="wax">
+        </button>
+    </div>
+    <div class="letter">
+        <div class="bg animate__animated animate__zoomInUp">
+            <div class="contents">
+                <p class="typing_txt">영애님을 초대합니다.</p>
+                <p class="letter_text">
+                    사랑 가득한 새해가 시작 되었어요. <br/>
+                    그 동안의 감사한 마음을 담아 파티를 준비해 보았답니다. <br/>
+                    이 기쁜 자리에 영애님을 꼭 초대하고 싶어요. <br/>
+                    전에 말씀드린 비밀 저택 그 곳에서 열린답니다. <br/>
+                    맛있는 식사와 즐길거리가 충분하니 와서 함께해주었으면 좋겠어요. <br/>
+                    그 날 뵙기를 기다릴게요. <br/>
+                    1월 28일 그 곳에서 봬요<br/><br/><br/>
+                    <span class="text_right">사랑을 담아, 당신의 친구</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const inviteBtn = document.querySelector('.invite_btn');
+        const onClickBtn = () => {
+            const main = document.querySelector('.main');
+            main.classList.add('hidden')
+        }
+        inviteBtn.addEventListener('click', onClickBtn)
+
+        
+
+    </script>
+</body>
+</html>

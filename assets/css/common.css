@@ -1,0 +1,202 @@
+@charset "utf-8";
+html {
+    font-size: 7px;
+  }
+  @media all and (min-width: 280px) {
+    html {
+      font-size: 7.777px;
+    }
+  }
+  @media all and (min-width: 290px) {
+    html {
+      font-size: 8.055px;
+    }
+  }
+  @media all and (min-width: 300px) {
+    html {
+      font-size: 8.333px;
+    }
+  }
+  @media all and (min-width: 310px) {
+    html {
+      font-size: 8.611px;
+    }
+  }
+  @media all and (min-width: 320px) {
+    html {
+      font-size: 9.166px;
+    }
+  }
+  @media all and (min-width: 330px) {
+    html {
+      font-size: 9.166px;
+    }
+  }
+  @media all and (min-width: 340px) {
+    html {
+      font-size: 9.444px;
+    }
+  }
+  @media all and (min-width: 350px) {
+    html {
+      font-size: 9.722px;
+    }
+  }
+  @media all and (min-width: 360px) {
+    html {
+      font-size: 10px;
+    }
+  }
+/* reset */
+html,body {width:100%; height:100%;}
+body * {box-sizing: border-box;}
+html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside,dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {margin:0;padding:0;}
+body{-webkit-text-size-adjust:none; word-wrap:break-word; word-break:break-all;}
+body.fixed{overflow-y: hidden;}
+body,input,select,textarea,button,pre {border:none; font-size:1.4rem; font-family:"Noto Serif KR", serif; color: #000; }
+ul,ol,li{list-style-type:none;}
+table{ border-spacing:0; }
+img,fieldset{border:0;}
+address,cite,code{font-style:normal; font-weight:normal;}
+em, i{ font-style:normal; }
+label,img,input,select,textarea,button{vertical-align:middle;}
+.hide,legend{overflow: hidden; display:block; position:absolute; border: 0; width: .1rem; height: .1rem; clip: rect(.1rem, .1rem, .1rem, .1rem);}
+hr{display:none;}
+main,header,section,nav,footer,aside,article,figure{display:block;}
+a{color: #000;text-decoration:none;}
+button { cursor: pointer; color: #000; background-color: transparent; font-weight:400; }
+pre{ white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; }
+
+/* float */
+.left { float: left; }
+.right { float: right; }
+.clear {clear:both;}
+.clear:after { content:""; display:block; clear:both; }
+
+/* display */
+.dis_none {display: none;}
+.dis_block {display: block;}
+.dis_inblock {display: inline-block;}
+
+/* text-align */
+.txt_center {text-align: center;}
+.txt_left {text-align: left;}
+.txt_right {text-align: right;}
+
+/* margin */
+.martop_60{margin-top:6.0rem}
+
+/* padding */
+.pdtop_10{padding-top:1.0rem;}
+
+/* width */
+.w_100{width:10.0rem;}
+
+/* height */
+.h_100{height:10.0rem;}
+
+/* font-weight */
+.fs_bold {font-weight: bold}
+
+
+.main {
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.main .text {
+    color: #fff;
+    position: absolute;
+    font-size: 3rem;
+    top: 20rem;
+}
+.main .img {
+    margin-top: -10rem;
+}
+.main .img img {
+    width: 100%;
+}
+.main .invite_btn {
+    position: absolute;
+    bottom: 20rem;
+    width: 14rem;
+    height: 14rem;
+    color: #fff;
+}
+.invite_btn p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: .3rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.main.hidden,
+.letter {
+    display: none;
+}
+.main.hidden + .letter {
+    display: block;
+}
+.letter {    
+    min-height: 100vh;
+}
+.letter .bg {
+    min-height: 100vh;
+    width: 100%;
+    background: url(../imgae/letter.jpg)no-repeat center;
+    background-size: cover;
+    color: #532020;
+    text-align: center;
+    align-content: center;
+}
+p.typing_txt{
+    position:relative;
+    display: inline-block;
+    height: 4rem; 
+    overflow: hidden;
+    animation: typingAni 2.5s steps(30, end) 1;
+    font-weight: bold;
+    font-size: 2.8rem;
+    font-family: "Diphylleia", serif;
+}
+p.typing_txt::after{
+    position:absolute; 
+    display:block;
+    content:""; 
+    width: 2.6rem; 
+    height: 4rem;
+    top : .3rem;
+    right:0; 
+}
+.letter_text {
+    margin-top: 2rem;
+    opacity: 0;
+    max-height: 0;
+    line-height: 2;
+    font-weight: 600;
+    transition: all 2s;
+    animation: letter 1s ease-in-out 2.5s forwards;
+}
+@keyframes typingAni {
+    0%{width:0%}
+    100%{width: 26rem};
+}
+@keyframes letter {
+    0%{
+        opacity:0;
+        max-height: 0;
+    }
+    100%{
+        opacity: 1;
+        max-height: 30rem;
+    };
+}
